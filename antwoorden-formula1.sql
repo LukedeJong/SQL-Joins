@@ -27,3 +27,9 @@ JOIN races ON races.raceId = constructor_standing.raceId
 WHERE constructors.name = "Mclaren" AND races.year = 2010;
 
 -- Opdracht 5
+
+SELECT circuits.name, circuits.country, races.name, drivers.surname FROM circuits
+JOIN races ON races.circuitId = circuits.circuitId
+JOIN driver_standing ON driver_standing.raceId = races.raceId
+JOIN drivers ON drivers.driverId = driver_standing.driverId
+WHERE races.year = 1950 AND drivers.surname LIKE "f%";
