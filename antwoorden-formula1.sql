@@ -14,3 +14,9 @@ WHERE driver_standing.points = 10 AND races.year = 2017
 ORDER BY races.name;
 
 -- Opdracht 3
+
+SELECT drivers.forename, drivers.surname, pitstops.duration FROM drivers
+JOIN pitstops ON pitstops.driverId = drivers.driverId
+WHERE pitstops.duration < 25;
+
+-- Opdracht 4
