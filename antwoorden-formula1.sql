@@ -20,3 +20,10 @@ JOIN pitstops ON pitstops.driverId = drivers.driverId
 WHERE pitstops.duration < 25;
 
 -- Opdracht 4
+
+SELECT constructors.name, races.name FROM constructors
+JOIN constructor_standing ON constructor_standing.constructorId = constructors.constructorId
+JOIN races ON races.raceId = constructor_standing.raceId
+WHERE constructors.name = "Mclaren" AND races.year = 2010;
+
+-- Opdracht 5
