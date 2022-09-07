@@ -32,3 +32,10 @@ JOIN plaats ON plaats.code = studie.plaats
 GROUP BY studie.plaats;
 
 -- Opdracht 6
+
+SELECT COUNT(naam) AS "Aantal Studenten", deelname.periode, vak.vaknaam FROM student
+JOIN deelname ON deelname.id = student.id
+JOIN vak ON vak.code = deelname.vak
+GROUP BY deelname.vak;
+
+-- Opdracht 7
