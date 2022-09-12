@@ -39,3 +39,11 @@ JOIN vak ON vak.code = deelname.vak
 GROUP BY deelname.vak;
 
 -- Opdracht 7
+
+-- Opdracht 10
+
+SELECT deelname.periode, student.naam, vak.vaknaam, deelname.cijfer FROM deelname
+JOIN student ON student.id = deelname.id
+JOIN vak ON vak.code = deelname.vak
+GROUP BY deelname.periode, vak.vaknaam, student.naam
+ORDER BY deelname.periode, deelname.cijfer DESC, student.naam;
